@@ -1,9 +1,20 @@
 <?xml version="1.0"?>
 <project name="test" default="create"  basedir=".">
 
-   <target name="create">
+   <target name="create" depends="delete">
       <mkdir dir="d1"/>
         <mkdir dir="d2"/>
+   </target>
+
+
+
+<target name="delete">
+<delete dir="d1"/>
+<delete dir="d2"/>
+</target>
+
+ <target name="info">
+      <echo>Hello World - Welcome to Apache Ant!</echo>
    </target>
 
 </project>
